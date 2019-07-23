@@ -12,8 +12,8 @@ public class CurrentWeatherRepository {
     @Autowired
     MongoTemplate mongoTemplate;
 
-    public void insertCurrentWeather(CurrentWeather currentWeather) {
-        mongoTemplate.insert(currentWeather);
+    public void saveCurrentWeather(CurrentWeather currentWeather) {
+        mongoTemplate.save(currentWeather);
     }
 
     public CurrentWeather findCurrentWeather(String cityName) {

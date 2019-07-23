@@ -1,11 +1,13 @@
 package org.ajou.realcoding.weathercrawler.weathercrawler.domain;
 
 import lombok.Data;
+import org.springframework.data.annotation.Id;
 
 import java.util.List;
 
 @Data
 public class CurrentWeather {
+    @Id
     private String name;
     private int dt;
     private String base;

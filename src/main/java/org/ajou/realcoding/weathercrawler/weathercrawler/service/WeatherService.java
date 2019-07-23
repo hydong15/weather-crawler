@@ -45,7 +45,7 @@ public class WeatherService {
         citiesQueue.addLast(targetCity);
 
         CurrentWeather currentWeather = openWeatherMapApiClient.requestCurrentWeather(targetCity);
-        currentWeatherRepository.insertCurrentWeather(currentWeather);
+        currentWeatherRepository.saveCurrentWeather(currentWeather);
         log.info("Current weather has been inserted successfully. ()" + currentWeather);
     }
 }
